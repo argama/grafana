@@ -18,7 +18,7 @@ export class SearchSrv {
     return this.queryForRecentDashboards().then(result => {
       if (result.length > 0) {
         sections['recent'] = {
-          title: 'Recent',
+          title: '最近使用したもの',
           icon: 'fa fa-clock-o',
           score: -1,
           removable: true,
