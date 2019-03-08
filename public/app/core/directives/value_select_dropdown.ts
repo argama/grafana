@@ -18,7 +18,7 @@ export class ValueSelectDropdownCtrl {
   onUpdated: any;
 
   /** @ngInject */
-  constructor(private $q) {}
+  constructor(private $q) { }
 
   show() {
     this.oldVariableText = this.variable.current.text;
@@ -155,7 +155,7 @@ export class ValueSelectDropdownCtrl {
       option.selected = true;
     }
 
-    if (option.text === 'All' || excludeOthers) {
+    if (option.text === 'All' || excludeOthers) { // ABIT: あやしい
       setAllExceptCurrentTo(false);
       commitChange = true;
     } else if (!this.variable.multi) {
@@ -173,7 +173,7 @@ export class ValueSelectDropdownCtrl {
     this.selectedValues = _.filter(this.options, { selected: true });
 
     if (this.selectedValues.length > 1) {
-      if (this.selectedValues[0].text === 'All') {
+      if (this.selectedValues[0].text === 'All') { // ABIT: あやしい
         this.selectedValues[0].selected = false;
         this.selectedValues = this.selectedValues.slice(1, this.selectedValues.length);
       }

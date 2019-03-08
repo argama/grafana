@@ -51,7 +51,7 @@ export class CustomVariable implements Variable {
   }
 
   addAllOption() {
-    this.options.unshift({ text: 'All', value: '$__all' });
+    this.options.unshift({ text: 'All', value: '$__all' }); // ABIT: あやしい
   }
 
   dependsOn(variable) {

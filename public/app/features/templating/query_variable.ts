@@ -140,7 +140,7 @@ export class QueryVariable implements Variable {
   }
 
   addAllOption() {
-    this.options.unshift({ text: 'All', value: '$__all' });
+    this.options.unshift({ text: 'All', value: '$__all' }); // ABIT: あやしい
   }
 
   metricNamesToVariableValues(metricNames) {

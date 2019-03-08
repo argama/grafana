@@ -24,7 +24,7 @@ export class SearchCtrl {
     appEvents.on('show-dash-search', this.openSearch.bind(this), $scope);
     appEvents.on('hide-dash-search', this.closeSearch.bind(this), $scope);
 
-    this.initialFolderFilterTitle = 'All';
+    this.initialFolderFilterTitle = 'All';  // ABIT: ビンゴ!!
     this.isEditor = contextSrv.isEditor;
     this.hasEditPermissionInFolders = contextSrv.hasEditPermissionInFolders;
   }
